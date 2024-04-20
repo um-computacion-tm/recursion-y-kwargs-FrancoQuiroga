@@ -11,15 +11,14 @@ def buscar_datos(*args:str, **kwargs:dict):
     id_list = []
     datadict_list = []
     comparison_list = []
+    dictcounter = 0
 # Desempaquetar
     for id,data in kwargs.items():
         id_list.append(id)
         datadict_list.append(data)
-# Analizar
     for argument in args:
         comparison_list.append(argument)
 # Retornar
-    dictcounter = 0
     for dictionary in datadict_list:
 #       dictionary.items(): # Mi problema es que estoy comparando una lista con un dictionario
         if comparison_list == list(dictionary.values()):
